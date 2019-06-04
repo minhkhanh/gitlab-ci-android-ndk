@@ -18,5 +18,4 @@ RUN curl -L "${ANDROID_NDK_URL}" -o android-ndk-${ANDROID_NDK_VERSION}-linux-x86
   && rm -rf android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
 ENV ANDROID_NDK_HOME ${SDK_HOME}/android-ndk-${ANDROID_NDK_VERSION}
 ENV PATH ${ANDROID_NDK_HOME}:$PATH
-RUN chmod u+x ${ANDROID_NDK_HOME}/ -R
-
+RUN chmod +x ${ANDROID_NDK_HOME}/ndk-build
